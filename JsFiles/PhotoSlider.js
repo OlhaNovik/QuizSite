@@ -19,7 +19,7 @@ export function changePhoto() {
     const img = document.createElement('img');
     img.src = photoUrls[currentPhotoIndex];
     img.alt = `Photo ${currentPhotoIndex + 1}`;
-
+    img.classList.add('fade-in');
     fotoContainer.appendChild(img);
 
     currentPhotoIndex = (currentPhotoIndex + 1) % photoUrls.length;
