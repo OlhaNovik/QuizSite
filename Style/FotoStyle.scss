@@ -1,0 +1,45 @@
+.group_text_foto {
+    display: flex;
+    width: 100%;
+}
+
+#foto_container {
+    width: 40%;
+    height: 1117px;
+    background-color: #0B0219;
+
+    img {
+        width: 550px;
+        height: 650px;
+    }
+}
+
+
+
+@media screen and (max-width: 450px) {
+
+#foto_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 935px;
+    overflow: hidden;
+    z-index: -1;
+    img {
+        width: 430px;
+        height: 935px;
+        object-fit: cover; 
+    }
+
+}
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #0b02197f; 
+}
+}

@@ -1,0 +1,64 @@
+.checkBox_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+
+    input {
+        width: 25px;
+        height: 25px;
+        outline: 2px solid red;
+        margin-right: 10px;
+    }
+
+    label {
+        @include text_decor('Monda, sans-serif', 400, 20px);
+        color: white;
+    }
+
+}
+
+.checkBox_container6 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+    input {
+        width: 25px;
+        height: 25px;
+        outline: 2px solid red;
+        margin-right: 10px;
+    }
+
+    label {
+        @include text_decor('Monda, sans-serif', 400, 20px);
+        color: white;
+    }
+}
+
+.checkbox-item6 {
+    margin-bottom: 10px;
+}
+
+
+@media screen and (max-width: 450px) {
+    .checkbox-item {
+        input {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .checkBox_container6 {
+        gap: 0;
+
+        input {
+            width: 20px;
+            height: 20px
+        }
+    }
+}

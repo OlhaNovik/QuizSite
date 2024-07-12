@@ -1,20 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Mohave:ital,wght@0,300..700;1,300..700&family=Monda:wght@400..700&family=Mukta+Mahee:wght@200;300;400;500;600;700;800&display=swap');
 
+@import "./Style/FotoStyle.scss";
+@import "./Style/TextStyle.scss";
+@import "./Style/CheckBox.scss";
+@import "./Style/LineProgress.scss";
 
-
-@mixin text_decor($family, $font_weight, $size) {
-    font-family: $family;
-    font-weight: $font_weight;
-    font-size: $size;
-}
-
-@mixin btn_decor($width, $height, $color, $backgr) {
-    width: $width;
-    height: $height;
-    color: $color;
-    background-color: $backgr;
-    cursor: pointer;
-}
 
 body {
     background-color: #0B0219;
@@ -32,183 +22,11 @@ header {
     }
 }
 
-h1 {
-    color: white;
-}
 
 #middle_container {
-    width: 50%;
+    width: 60%;
     height: 1117px;
 }
-
-
-
-.container_text_web1 {
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.head_text_we1 {
-    width: 271px;
-    height: 90px;
-    border: 3px solid red;
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    p {
-        color: white;
-        @include text_decor('Mukta Mahee, sans-serif', 700, 48px);
-    }
-}
-
-.block_text {
-
-    text-align: center;
-
-    p {
-        @include text_decor('Mohave, sans-serif', 700, 36px);
-        color: white;
-        margin: 20px;
-    }
-}
-
-.web1_block_three {
-    width: 60%;
-    text-align: center;
-
-    p {
-        margin: 0;
-        @include text_decor('Monda, sans-serif', 400, 20px);
-        color: white;
-    }
-}
-
-.web1_block_four {
-    p {
-        @include text_decor('Mohave, sans-serif', 700, 40px);
-        color: white;
-    }
-}
-
-
-.container_btn {
-    width: 385px;
-    height: 70px;
-    display: flex;
-    justify-content: space-around;
-
-    .btn_yes {
-        @include btn_decor(163px, 70px, white, #20C982);
-        @include text_decor('Mukta Mahee, sans-serif', 700, 48px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-    }
-
-    .btn_no {
-        @include btn_decor(163px, 70px, white, #470A0A);
-        @include text_decor('Mukta Mahee, sans-serif', 700, 48px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-}
-
-.web2_container {
-    width: 100%;
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.web2_block_text {
-    width: 75%;
-    text-align: center;
-
-    p {
-        @include text_decor('Mohave, sans-serif', 700, 36px);
-        color: white;
-    }
-}
-
-.web5_hide_text {
-    margin-bottom: 40px;
-
-    p {
-        @include text_decor('Monda, sans-serif', 400, 16px);
-        color: #84759B;
-    }
-}
-
-.btn_cont {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @include btn_decor(404px, 70px, white, #20C982);
-    @include text_decor('Mukta Mahee, sans-serif', 700, 48px);
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-
-
-.checkBox_container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-}
-
-.checkbox-item {
-    display: flex;
-    align-items: center;
-
-    input {
-        width: 25px;
-        height: 25px;
-        outline: 2px solid red;
-        margin-right: 10px;
-    }
-
-    label {
-        @include text_decor('Monda, sans-serif', 400, 20px);
-        color: white;
-    }
-
-}
-
-.checkBox_container6 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-
-    input {
-        width: 25px;
-        height: 25px;
-        outline: 2px solid red;
-        margin-right: 10px;
-    }
-
-    label {
-        @include text_decor('Monda, sans-serif', 400, 20px);
-        color: white;
-    }
-}
-
-.checkbox-item6 {
-    margin-bottom: 10px;
-}
-
 
 
 @media screen and (max-width: 450px) {
@@ -216,52 +34,13 @@ h1 {
         svg {
             width: 30px;
             height: 25px;
+
         }
     }
 
     #middle_container {
+        height: 935px;
         width: 100%;
-
     }
 
-    .web1_block_one {
-        width: 205px;
-        height: 60px;
-
-        p {
-            font-size: 32px;
-        }
-
-    }
-
-    .block_text {
-        p {
-            @include text_decor('Mohave, sans-serif', 700, 21px);
-        }
-    }
-
-    .web1_block_three {
-
-        p {
-            @include text_decor('Mukta Mahee, sans-serif', 400, 14px);
-            color: white;
-        }
-    }
-
-    .web1_block_four {
-        p {
-            @include text_decor('Mohave, sans-serif', 700, 24px);
-        }
-    }
-
-    .container_btn {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 15px;
-
-        .btn_yes {
-            margin: 25px 0 15px 0;
-        }
-    }
 }
